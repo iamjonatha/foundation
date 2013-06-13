@@ -6,7 +6,7 @@
   Foundation.libs.topbar = {
     name : 'topbar',
 
-    version : '4.2.2',
+    version : '4.2.3',
 
     settings : {
       index : 0,
@@ -274,12 +274,12 @@
             var offst = this.outerHeight($('.top-bar'));
 
           $window.scroll(function() {
-            if ($window.scrollTop() >= (distance)) {
+            if ($window.scrollTop() > (distance)) {
               $(klass).addClass("fixed");
               $('body').css('padding-top',offst);
             }
 
-            else if ($window.scrollTop() < distance) {
+            else if ($window.scrollTop() <= distance) {
               $(klass).removeClass("fixed");
               $('body').css('padding-top','0');
             }
